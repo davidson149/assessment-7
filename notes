@@ -1,0 +1,19 @@
+2. tinyArray:
+Results for the tinyArray
+insert 61.297 μs
+append 164.753 μs
+3. mediumArray:
+Results for the mediumArray
+insert 308.878 μs
+append 266.895 μs
+4.Results for the largeArray
+insert 14.956625 ms
+append 1.032064 ms
+1. Extra large Array:
+Results for the extraLargeArray
+insert 2.037645791 s
+append 6.735665 ms
+
+The patterns that are seen here by both insert and append is enough to notice a difference between both methods that are incremental.
+Insert seems to be slower in that as we get to the larger array it gets up to the seconds category and doesnt even stay in the milliseconds. For a function that gets significantly slower its not one that scales very well. Where as the append method is consistent to scale and only gets to the miliseconds. Which is considerably better than the insert method.
+Out of the two the append method is prefered and i would use to sort an array.
